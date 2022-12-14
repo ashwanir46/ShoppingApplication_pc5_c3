@@ -11,10 +11,10 @@ public class AppConfig {
     public RouteLocator myRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(p -> p
-                        .path("/userdata/**")
+                        .path("/userdata/api/v2")
                         .uri("http://authentication-service:8085/")
                 ).route(p -> p
-                        .path("/userproduct/api/**")
+                        .path("/userproduct/api/v1")
                         .uri("http://product-service:8081/")
                 ).build();
     }
